@@ -1,0 +1,22 @@
+#resultsForm{
+    display: flex;
+    background:#38071e ;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#resultsForm p{
+    margin-left: 2%;
+}
+#sort{
+    display: flex;
+    width: 30%;
+    align-items: center;
+}
+.sortByReleaseDate, .sortByRating{
+    margin-left: 5%;
+    color: #38071e;
+}
+.sortByReleaseDate:focus, .sortByRating:focus{
+    background: #38071e;
+    color: white;
+}
