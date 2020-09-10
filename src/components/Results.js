@@ -1,12 +1,12 @@
 import React from 'react';
 import './styles/ResultsStyle.css';
 
-export function Results({movies},{setSortBy}){
+export function Results({movies,setSortBy}){
     const moviesCounter = movies.length;
     
 
     const handleSort = (event) =>{
-        event.preventDefault();
+        // event.preventDefault();
         setSortBy(event.target.getAttribute('data-sortby'))
     }
 

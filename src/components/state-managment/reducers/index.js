@@ -3,6 +3,7 @@ import {ADD_MOVIE} from '../constants';
 const defaultState = {movies:[]};
 
 export function reducer(state = defaultState, action){
+    
     switch(action.type){
         case ADD_MOVIE:
             return{
