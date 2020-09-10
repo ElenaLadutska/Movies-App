@@ -8,15 +8,11 @@ export function SearchMovies(){
     const [movies,setMovies] = useState([]);
     const [searchParameter,setSearchParameter ] = useState('');
     const [searchBy,setSearchBy ] = useState('');
-    const [sortBy,setSortBy] = useState('');
+    const [sortBy,setSortBy ] = useState('');
 
     const handleSearchParameter = (event) =>{
         event.preventDefault();
         setSearchBy(event.target.getAttribute('data-searchby'))
-    }
-
-    const handleSort = (event) =>{
-        setSortBy(event.target.getAttribute('data-sortby'));
     }
 
     const handleSubmit = (event) =>{
@@ -61,7 +57,7 @@ export function SearchMovies(){
 
             </div>
 
-        <Results movies={movies} />
+        <Results movies={movies} setSortBy={setSortBy}/>
         <Movie movie={movies}/>
 
         </form>
