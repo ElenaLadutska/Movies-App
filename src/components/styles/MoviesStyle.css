@@ -18,7 +18,9 @@
     flex-wrap: wrap;
 }
 .foundMovie{
-    margin-right: 5%;
+    width: 25%;
+    height: 25%;
+    margin-top: 5%;
     margin-bottom: 5%;
     color: white;
     list-style-type: none;
