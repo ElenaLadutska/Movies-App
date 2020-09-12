@@ -1,12 +1,11 @@
 import React from 'react';
-import { SearchMovies } from './SearchMovies';
+import {SearchMovies} from './SearchMovies';
 
+export function MoviesApp() {
 
-export function MoviesApp(){
-
-    return(
+    return (
         <div className='MoviesApp'>
-            <SearchMovies />
+            <SearchMovies/>
         </div>
     )
 }

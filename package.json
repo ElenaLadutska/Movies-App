@@ -31,8 +31,12 @@
     "jquery": "^3.5.1",
     "lodash": "^4.17.20",
     "react": "^16.13.1",
+    "react-bootstrap-buttons": "^1.0.0",
+    "react-bootstrap4-modal": "^1.7.5",
     "react-browser-router": "^2.1.2",
     "react-dom": "^16.13.1",
+    "react-header-modal": "^0.4.14",
+    "react-modal": "^3.11.2",
     "redux": "^4.0.5",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0"
