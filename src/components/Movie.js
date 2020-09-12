@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import Modal from 'react-modal';
+import './styles/Modal.css'
 
 const customStyles = {
     content: {
@@ -20,12 +21,16 @@ export function Movie({movies}) {
     const [modalIsOpen, setIsOpen] = useState(false);
 
     function openModal(event) {
-        event.preventDefault();
         setIsOpen(true);
     }
-
+    function clickedMovie(){
+        let target = event.target.closest('li');
+        let clickedMovie = document.getElementById('clickedMovie').innerHTML=target.innerHTML;
+        return clickedMovie
+    }
     function afterOpenModal() {
         subtitle.style.color = '#f00';
+        clickedMovie()
     }
 
     function closeModal() {
@@ -61,9 +66,9 @@ export function Movie({movies}) {
                         style={customStyles}
                         contentLabel="Example Modal">
 
+                        <button className="closeModalBtn" onClick={closeModal}>x</button>
                         <h2 ref={_subtitle => (subtitle = _subtitle)}></h2>
-                        <div></div>
-                        <button onClick={closeModal}>close</button>
+                        <div id="clickedMovie"></div>
                         <form></form>
                     </Modal>
                 </div>
