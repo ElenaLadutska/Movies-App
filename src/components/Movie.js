@@ -4,6 +4,8 @@ import './styles/Modal.css'
 
 const customStyles = {
     content: {
+        width: '45%',
+        height: 'auto',
         top: '50%',
         left: '50%',
         right: 'auto',
@@ -22,7 +24,8 @@ export function Movie({movies}) {
     const [numberId, setNumberId] = useState(Number);
     const clickedMovieData = movies.filter(movie => movie.id == numberId);
 
-    function openModal(event) {
+
+    function openModal() {
         setIsOpen(true);
     }
 
@@ -57,7 +60,7 @@ export function Movie({movies}) {
                             <h3>{movie.title}</h3>
                             <div className="release_date">Release date:{movie.release_date}</div>
                             <div className="genre">Genre: {movie.genres}</div>
-                            <div className="vote_average">vote average: {movie.vote_average}</div>
+                            <div className="vote_average">Vote average: {movie.vote_average}</div>
                         </li>
                     )
                 }
@@ -75,16 +78,23 @@ export function Movie({movies}) {
                         <div id="clickedMovie">
                             {
                                 clickedMovieData.map(
-                                    movie => <div key={movie.id} id={movie.id}>
+                                    movie => 
+                                    <div key={movie.id} id={movie.id} className="clickedMovie">
                                         <img
-                                            className="moviesImg"
+                                            className="clickedMoviesImg"
                                             src={movie.poster_path}
                                             alt={`${movie.title}`}
                                             width="200"
                                             height='400'></img>
-                                        <h3>{movie.title}</h3>
-                                        <div>{movie.overview}</div>
-                                        <div>Budget:${movie.budget}</div>
+                                        <div className="mainInfoOfClickedMovie">
+                                            <h2 className="clickedMovieTitle">{movie.title}</h2>
+                                            <p className="clickedMovieTagline">{movie.tagline}</p>
+                                            <p className="clickedMovieGenre">
+                                                {movie.genres}</p>
+                                            <p className="clickedMovieOverview">{movie.overview}</p>
+                                            <p className="clickedMovieReleaseDate">Release date:{movie.release_date}</p>
+                                            <p className="clickedMovieBudget">Budget:${movie.budget}</p>
+                                        </div>
                                     </div>
                                 )
                             }

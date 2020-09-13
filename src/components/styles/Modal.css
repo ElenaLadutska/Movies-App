@@ -1,10 +1,25 @@
-.budget,
-.overview,
-.modalTitle {
-    color: white;
+.clickedMovie{
+    display: flex;
+    flex-wrap: wrap;
 }
-.overview{
-    color:black;
+.mainInfoOfClickedMovie{
+    width: 60%;
+    margin-left: 5%;
+}
+.clickedMovieOverview{
+    color:#38071e;
     width: 100%;
     margin-bottom: 3%;
+}
+.clickedMovieTitle{
+    width: 100%;
+    color:#38071e;
+}
+.clickedMoviesImg{
+    height: 300px;
+}
+.clickedMovieBudget,.clickedMovieReleaseDate,.clickedMovieTagline,.clickedMovieGenre{
+    width: 100%;
+    color: #38071e;
+    margin: 0 auto;
 }
