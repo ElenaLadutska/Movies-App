@@ -1,0 +1,9 @@
+#pagination{
+    background:#38071e;
+    display: flex;
+    justify-content: center;
+}
+#leftBtn, .count, #rightBtn{
+    background: transparent;
+    color: white;
+}

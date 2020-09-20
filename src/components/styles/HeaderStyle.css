@@ -1,0 +1,21 @@
+#search{
+    background:#59193C;
+    padding: 2%;
+}
+#search h1,p{
+    color: white;
+}
+
+#searchInput{
+    width: 80%;
+    background-color: transparent;
+    color: #51C9CE;
+    margin-bottom: 2%;
+}
+
+#btnsForm{
+    display: flex;
+}
+/* #btnSearch{
+
+} */
